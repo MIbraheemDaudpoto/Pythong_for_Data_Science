@@ -752,8 +752,6 @@
 
 # Qno12: Create a dictionary that maps numbers to their squares for numbers from 1 to 10.
 
-jjj
-
 
     
     
