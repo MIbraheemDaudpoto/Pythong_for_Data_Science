@@ -489,3 +489,19 @@
 
 
 
+# # 14. Write a function to find common elements in two lists.
+# a=[65,1,2,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20]
+# b=[3,4,5,6,7,8,9,10,12,14,65]
+
+
+# def check_common(a,b):
+#     common=[]
+#     for i in range(len(a)):
+#         if a[i] in b:
+#             common.append(a[i])
+#     return common        
+            
+# print(check_common(a,b))
+
+
+
