@@ -463,3 +463,29 @@
 # print(type(char_counts(a)))
 
 
+    # 12. Create a program to check if a key exists in a dictionary.
+# a={
+#     "name": "Ibraheem",   
+#     "age": 23,
+#     "department": "IT",
+#     "semester": 5
+# }
+# key= str(input("Enter Key to check its existence in Dictionary: "))
+
+
+# def search_Key(dic, key):
+#     if key in dic:
+#         print("Key is valid")
+#         print(f"Value is of {key} is {dic[key]}")
+#     else:
+#         print("Invalid Key")
+#         print(f"Not found any key about: {key}")
+
+
+# search_Key(a,key)
+   
+
+
+
+
+
