@@ -518,3 +518,19 @@
 
 
 # print(check_vowels(a))
+
+
+
+
+# 16. Write a function to remove all punctuation from a string.
+
+# a=str(input("Give me String: "))
+
+# def removePunct(str):
+#     all_symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+#     for i in str:
+#         if i in all_symbols:
+#             str=  str.replace(i,"")
+#     return str
+    
+# print(removePunct(a))
