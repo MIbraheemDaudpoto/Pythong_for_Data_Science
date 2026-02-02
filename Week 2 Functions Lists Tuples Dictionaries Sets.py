@@ -505,3 +505,16 @@
 
 
 
+# 15. Write a function to count vowels in a string.
+# a=str(input("Give me String: "))
+
+# def check_vowels(str):
+#     vowels="aeiou"
+#     count=0
+#     for i in str:
+#         if i in vowels:
+#             count+=1
+#     return count
+
+
+# print(check_vowels(a))
