@@ -55,3 +55,22 @@
 # except Exception as err:
 #     print(err)
 
+
+
+
+#Create file with 'x'
+
+try:
+    p= open(r"C:\Users\ibrah\OneDrive\Desktop\New  file.txt",'x')
+    # 'w' is used to create file, fails if file exists.
+
+    
+    p.write("\n once again Hello This is new file and this overlaped")
+
+    print(p.read())
+    p.close()
+except Exception as err:
+    print(err)
+
+
+
