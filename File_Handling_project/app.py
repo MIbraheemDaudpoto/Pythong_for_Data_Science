@@ -1,40 +1,36 @@
 from pathlib import Path
 
-
-def readFileandFolder():
+def createAndReadFile():
     try:
         p= Path('')
-        items= list(p.rglob('*'))
-        
-        print("Available Files")
-        for i,items in enumerate(items):
-            print(f"{i+1}: {items}")
-    
+        files= list(p.rglob('*'))
 
+
+        for i, items in enumerate(files):
+            print(f'{i+1}: {items}')
     except Exception as err:
         print(err)
-
-
-def createFileFunc():
-    try:
-        readFileandFolder()
-        name= input("Set Name of Your File with extension:- ")
-        p=Path(name)
-        if not p.exists():
-            with open(p,'w') as file:
-                content= input("Add Some content if you want to ADD:- ")
-                file.write(content)
-            
-            print("File Created Successfully")
-        else:
-            print("File Already Exists")
-    except Exception as err:
-        print(err)
-
-
-    
 
   
+def createFile():
+    try:
+        createAndReadFile()
+        file= input("Add File name with extension:- ")
+
+        p=Path(file)
+
+        if  not p.exists():
+            with open(file,'w') as File:
+                content= input("Add Some content inside file:- ")
+                File.write(content)
+                print("FILE CREATED SUCCESSFULLY")
+        else:
+            print("File Already Exists with this name in this path")
+            
+    except Exception as err:
+        print(err)
+
+
 
 
 
@@ -47,4 +43,4 @@ print("Press 4 for Delete: ")
 inpt= int(input("What you Want to Do: "))
 
 if inpt==1:
-    createFileFunc()
+    createFile()
