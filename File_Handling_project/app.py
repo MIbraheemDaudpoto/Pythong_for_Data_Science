@@ -45,7 +45,7 @@ def readFile():
         else:
             print("File is incorrect")
     except Exception as err:
-        print(f"err")
+        print(f"{err}")
 
 
 
@@ -80,7 +80,38 @@ def updateFile():
                     fs.write(" "+ data)       
 
     except Exception as err:
-        print(f"err")
+        print(f"{err}")
+
+
+
+
+# Delete
+
+def DeleteFile():
+    try:
+        print("Here is some Files, Which one you want to Delete:)")
+        readFileAndFolder()
+        name= input("Enter File Namme:) ")
+        p= Path(name)
+
+        if p.exists() and p.is_file():
+            confirm= input(f"Are You sure you want to Delete  {name} File? (Y/N) :) ").lower()
+            if confirm=='y':
+                p.unlink()
+                print("File Deleted Successfully")
+            else:
+                print("Deletion cancelled.")
+
+        else:
+            print("File not found or it is not a regular file.")
+
+
+    except Exception as err:
+        print(err)
+
+
+
+
 
 print("Press 1 for Create a New File")
 print("Press 2 for Read File")
@@ -97,3 +128,5 @@ elif check==2:
     readFile()
 elif check==3:
     updateFile()
+elif check==4:
+    DeleteFile()
