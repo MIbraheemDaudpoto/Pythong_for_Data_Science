@@ -52,29 +52,35 @@ def readFile():
 # Update
 
 def updateFile():
-    print("Here is your Folder Structure :)")
-    readFileAndFolder()
-    name= str(input("Enter Your File Name: "))
-    p=Path(name)
-    if p.exists() and p.is_file():
-        print("Press 1 For Change your File Name: ")
-        print("Press 2 for OverWritting  File: ")
-        print("Press 3 for Appending some Data: ")
+    try:
+        print("Here is your Folder Structure :)")
+        readFileAndFolder()
+        name= str(input("Enter Your File Name: "))
+        p=Path(name)
+        if p.exists() and p.is_file():
+            print("Press 1 For Change your File Name: ")
+            print("Press 2 for OverWritting  File: ")
+            print("Press 3 for Appending some Data: ")
 
-        response= int(input("Enter Your Response:) "))
-        if response==1:
-            name2= input("Enter Your New File Name:) ")
-            p2= Path(name2)
-            if not p2.exists():
-                p.rename(p2)
-            else: 
-                print("This File Already Exists")
+            response= int(input("Enter Your Response:) "))
+            if response==1:
+                name2= input("Enter Your New File Name:) ")
+                p2= Path(name2)
+                if not p2.exists():
+                    p.rename(p2)
+                else: 
+                    print("This File Already Exists")
+            elif response==2:
+                with open(p,"w") as fs:
+                    data=input("Enter Your New Content:) ")
+                    fs.write(data)
+            elif response==3:
+                with open(p,'a') as fs:
+                    data=input("Enter other Data you want to append:) ")
+                    fs.write(" "+ data)       
 
-
-
-
-
-
+    except Exception as err:
+        print(f"err")
 
 print("Press 1 for Create a New File")
 print("Press 2 for Read File")
