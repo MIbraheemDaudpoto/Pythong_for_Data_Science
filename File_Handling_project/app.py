@@ -112,7 +112,9 @@ def DeleteFile():
 
 
 
-
+print("\n" + "="*40)
+print("File Manager")
+print("="*40)
 print("Press 1 for Create a New File")
 print("Press 2 for Read File")
 print("Press 3 for update File")
@@ -130,3 +132,5 @@ elif check==3:
     updateFile()
 elif check==4:
     DeleteFile()
+else:
+    print("Invalid choice. Please enter a number from 1 to 4.")
