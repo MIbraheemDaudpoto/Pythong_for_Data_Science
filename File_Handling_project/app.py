@@ -47,6 +47,27 @@ def readFile():
     except Exception as err:
         print(f"err")
 
+
+
+# Update
+
+def updateFile():
+    print("Here is your Folder Structure :)")
+    readFileAndFolder()
+    name= str(input("Enter Your File Name: "))
+    p=Path(name)
+    if p.exists() and p.is_file():
+        print("Press 1 For Change your File Name: ")
+        print("Press 2 for OverWritting  File: ")
+        print("Press 3 for Appending some Data: ")
+
+        response= int(input("Enter Your Response:) "))
+        if response==1:
+            
+
+
+
+
 print("Press 1 for Create a New File")
 print("Press 2 for Read File")
 print("Press 3 for update File")
@@ -60,3 +81,5 @@ if check==1:
     createFile()
 elif check==2:
     readFile()
+elif check==3:
+    updateFile()
