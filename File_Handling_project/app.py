@@ -63,7 +63,15 @@ def updateFile():
 
         response= int(input("Enter Your Response:) "))
         if response==1:
-            
+            name2= input("Enter Your New File Name:) ")
+            p2= Path(name2)
+            if not p2.exists():
+                p.rename(p2)
+            else: 
+                print("This File Already Exists")
+
+
+
 
 
 
