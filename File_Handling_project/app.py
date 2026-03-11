@@ -3,15 +3,60 @@ from pathlib import Path
 
 
 
+def readFileAndFolder():
+    path= Path('')
+    items= list(path.rglob('*'))
+
+    for i, items in enumerate(items):
+        print(f"{i+1} : {items}")
+
+    
+
+def createFile():
+    try:
+        print("Here is your folder structure")
+        readFileAndFolder()
+        name= input("What Should be your File Name: ")
+        p= Path(name)
+        if not p.exists():
+            with open(p,'w') as fs:
+                data= input("Enter Data: ")
+                fs.write(data)
+            print("FILE CREATED SUCCESSFULLY")        
+        else: 
+            print("File Already Exists!")
+    except Exception as err:
+        print(err)
 
 
-print("Press 1 for Create New File Inside this folder: ")
-print("Press 2 for Read  a File: ")
-print("Press 3 for Update File: ")
-print("Press 4 for Delete: ")
 
 
-inpt= int(input("What you Want to Do: "))
+def readFile():
+    try:
+        print("Here is Complete Folder Structure: ")
+        readFileAndFolder()
+        fName= input("Enter file Name: ")
+        p= Path(fName)
+        if p.exists() and p.is_file():
+            with open(p) as fs:
+                data= fs.read()
+                print(data)
+            print("File Read Successfully")
+        else:
+            print("File is incorrect")
+    except Exception as err:
+        print(f"err")
 
-if inpt==1:
+print("Press 1 for Create a New File")
+print("Press 2 for Read File")
+print("Press 3 for update File")
+print("Press 4 for Delete File")
+
+
+check= int(input("Enter Your Choice: "))
+
+
+if check==1:
     createFile()
+elif check==2:
+    readFile()
