@@ -19,28 +19,69 @@
 # Print positive and negative numbers separately from list
 
 
-list1= [2,4,-2,3,-4,5,-3,3,-3.4,-5.4,74.2]
+# list1= [2,4,-2,3,-4,5,-3,3,-3.4,-5.4,74.2]
 
-def post_negative (lst):
-    postive= []
-    negative=[]
+# def post_negative (lst):
+#     postive= []
+#     negative=[]
 
-    for i in lst:
-        if i >=0:
-            postive.append(i)
-        else:
-            negative.append(i)
+#     for i in lst:
+#         if i >=0:
+#             postive.append(i)
+#         else:
+#             negative.append(i)
 
-    print(f"Positive Elements are: {postive}")
-    print(f"negativeElements are: {negative}")
+#     print(f"Positive Elements are: {postive}")
+#     print(f"negativeElements are: {negative}")
             
 
+# post_negative(list1)
+
+
+# Find the mean (average) of all list elements.
+
+# Input: [10, 20, 30, 40] Mean = 25.0
+
+# inpt= [10, 20, 30, 40]
+
+# def mean (avg):
+#     mean=0
+#     sum=0
+
+#     for i in avg:
+#         sum+=i
+    
+#     mean= sum/ (len(avg))
+#     return mean
+
+# print(mean(inpt))
+
+
+
+
+# Find the greatest element and print its index.
+
+# Input: [4, 8, 2, 9, 1]
+
+
+# elements= [3,2,5,32,5,3,32,43,42,5,2,54]
+
+# def grtElement(elements):
+#     greatest=0
+
+#     for i in elements:
+#         if i > greatest:
+#             greatest=i
+    
+#     return greatest
+
+# print(grtElement(elements))
 
 
 
 
 
-post_negative(list1)
+
 
 
 
