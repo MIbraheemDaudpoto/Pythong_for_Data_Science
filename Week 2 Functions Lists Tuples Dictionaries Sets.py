@@ -15,6 +15,35 @@
 
                             # List
 
+
+# Print positive and negative numbers separately from list
+
+
+list1= [2,4,-2,3,-4,5,-3,3,-3.4,-5.4,74.2]
+
+def post_negative (lst):
+    postive= []
+    negative=[]
+
+    for i in lst:
+        if i >=0:
+            postive.append(i)
+        else:
+            negative.append(i)
+
+    print(f"Positive Elements are: {postive}")
+    print(f"negativeElements are: {negative}")
+            
+
+
+
+
+
+
+post_negative(list1)
+
+
+
 # a= [2,4,-2,3,-4,5,-3,3,-3.4,-5.4,74.2]
 
 
