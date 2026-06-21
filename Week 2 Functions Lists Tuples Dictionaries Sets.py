@@ -79,7 +79,32 @@
 
 
 
+# Find the second greatest element.
 
+# Input: [4, 8, 2, 9, 1]
+# Second greatest = 8
+
+
+elements= [-33,-4,-3,-2,-2,-3,-53]
+
+def secondGrt (elmts):
+    grt= float('-inf')
+    secGrt= float('-inf')
+
+
+    for i in elmts:
+        if i > grt:
+            secGrt=grt
+            grt=i
+        elif i > secGrt and i < grt:
+            secGrt= i
+        
+
+    
+    return secGrt
+
+print(secondGrt(elements))
+    
 
 
 
