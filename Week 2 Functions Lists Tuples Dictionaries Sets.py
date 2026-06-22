@@ -114,22 +114,33 @@
 
 # Here is an attempt at implementing this using a loop:
 
-def moveZeros(elmts):
-    write_index=0
+# def moveZeros(elmts):
+#     write_index=0
 
-    for i in range(len(elmts)):
+#     for i in range(len(elmts)):
 
-        if elmts[i] != 0:
-            elmts[write_index]=elmts[i]
-            write_index +=1 
-    for i in range(write_index, len(elmts)):
-        elmts[i]=0
+#         if elmts[i] != 0:
+#             elmts[write_index]=elmts[i]
+#             write_index +=1 
+#     for i in range(write_index, len(elmts)):
+#         elmts[i]=0
 
-    return elmts
+#     return elmts
 
-numbers =  [0, 9, 0, 0, 0, 3,4,0,2,2,0,2,4,0,4,2,4,6,0,20,0,5,3,0,0,2,30,40,4,0,0, 12]
+# numbers =  [0, 9, 0, 0, 0, 3,4,0,2,2,0,2,4,0,4,2,4,6,0,20,0,5,3,0,0,2,30,40,4,0,0, 12]
 
-print(moveZeros(numbers))
+# print(moveZeros(numbers))
+
+
+
+
+
+
+
+
+
+
+
 
 
 
