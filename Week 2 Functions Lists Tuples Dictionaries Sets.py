@@ -85,27 +85,51 @@
 # Second greatest = 8
 
 
-elements= [-33,-4,-3,-2,-2,-3,-53]
+# elements= [-33,-4,-3,-2,-2,-3,-53]
 
-def secondGrt (elmts):
-    grt= float('-inf')
-    secGrt= float('-inf')
+# def secondGrt (elmts):
+#     grt= float('-inf')
+#     secGrt= float('-inf')
 
 
-    for i in elmts:
-        if i > grt:
-            secGrt=grt
-            grt=i
-        elif i > secGrt and i < grt:
-            secGrt= i
+#     for i in elmts:
+#         if i > grt:
+#             secGrt=grt
+#             grt=i
+#         elif i > secGrt and i < grt:
+#             secGrt= i
         
 
     
-    return secGrt
+#     return secGrt
 
-print(secondGrt(elements))
+# print(secondGrt(elements))
     
 
+
+# The Challenge: "Move Zeros to the End"
+# You want to write a function that takes a list of numbers and moves all the 0s to the end of the list, while keeping the relative order of all the non-zero elements exactly the same.
+
+# You want to do this in-place (meaning you modify the original list directly, without creating a whole new list).  
+
+# Here is an attempt at implementing this using a loop:
+
+def moveZeros(elmts):
+    write_index=0
+
+    for i in range(len(elmts)):
+
+        if elmts[i] != 0:
+            elmts[write_index]=elmts[i]
+            write_index +=1 
+    for i in range(write_index, len(elmts)):
+        elmts[i]=0
+
+    return elmts
+
+numbers =  [0, 9, 0, 0, 0, 3,4,0,2,2,0,2,4,0,4,2,4,6,0,20,0,5,3,0,0,2,30,40,4,0,0, 12]
+
+print(moveZeros(numbers))
 
 
 

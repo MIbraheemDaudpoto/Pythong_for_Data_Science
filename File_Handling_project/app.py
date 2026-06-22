@@ -28,9 +28,6 @@ def createFile():
     except Exception as err:
         print(err)
 
-
-
-
 def readFile():
     try:
         print("Here is Complete Folder Structure: ")
