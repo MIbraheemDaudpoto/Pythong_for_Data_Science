@@ -25,17 +25,44 @@
 
 # Objects & Constructors
 
-class bags:
-    def __init__(self, req, zip, material):
-        self.req = req
-        self.zip =zip
-        self.material =material
+# class bags:
+#     def __init__(self, req, zip, material):
+#         self.req = req
+#         self.zip =zip
+#         self.material =material
 
+#     def details(self):
+#         print(f"This bag has {self.zip} Zips, {self.req}, made of {self.material}")        
+
+
+# newBag = bags("Color White", 3, "Leather")
+# newBag.details()
+
+
+
+
+
+class Animal:
+    def __init__(self,name):
+        self.name= name
+    
     def details(self):
-        print(f"This bag has {self.zip} Zips, {self.req}, made of {self.material}")        
+        print(f"Hello Your name is : {self.name}")
+
+        
+    
+class human (Animal):
+    pass
+
+    
+
+obj1= Animal("Dog")
+obj2= human("Sahil")
+
+obj2.details()
+        
 
 
-newBag = bags("Color White", 3, "Leather")
-newBag.details()
+
 
 
