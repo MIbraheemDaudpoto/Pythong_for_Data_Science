@@ -1,83 +1,262 @@
-# File Handling
+"""
+===========================================================
+            PYTHON BASICS - PART 03
+===========================================================
+
+Topics Covered:
+1. File Handling
+2. File Modes
+3. Exception Handling
+4. File Handling Practice
+
+Author : Muhammad Ibraheem
+===========================================================
+"""
 
 
+# =========================================================
+# 1. FILE HANDLING
+# =========================================================
+
+# Python provides built-in functions to create, read,
+# write, append, and manage files.
 
 
+# =========================================================
+# FILE MODES
+# =========================================================
+
+# r  -> Read (File must exist)
+# w  -> Write (Creates file if not exists, overwrites data)
+# a  -> Append (Adds new content at the end)
+# x  -> Create (Fails if file already exists)
+# r+ -> Read & Write
+# w+ -> Write & Read
+# a+ -> Append & Read
 
 
-            # Questions on File Handling
-
-
-
-# # Opening a file and append some text inside that file with 'a'
-
-# try:
-#     p= open(r"C:\Users\ibrah\OneDrive\Desktop\New Text Document.txt",'a')
-#     # 'a' is used to append text in a file which is aready created on particular path just append something inside this without overlaping/Rewriting a file
-
-#     p.write("\n once again Hello This is new file and this overlaped")
-
-#     print(p.read())
-#     p.close()
-# except Exception as err:
-#     print(err)
-
-
-
-
-
-
-# # Opening a file and append some text inside that file with 'a'
-
-# try:
-#     p= open(r"C:\Users\ibrah\OneDrive\Desktop\New  Document.txt",'w')
-#     # 'w' is used to update file and remove previous content inside file, it will remove it and write what you have given. If file is not available at  path it will auto create file and add those text inside  this.
-
-
-#     p.write("\n once again Hello This is new file and this overlaped")
-
-#     print(p.read())
-#     p.close()
-# except Exception as err:
-#     print(err)
-
-
-
-
-# # Opening a file and append some text inside that file with 'r'
+# =========================================================
+# EXAMPLE 1 : APPEND MODE ('a')
+# =========================================================
 
 # try:
-#     p= open(r"C:\Users\ibrah\OneDrive\Desktop\New  Document.txt",'r')
-#     # 'r' is used to read a file, file must exists.
-    
-#     print(p.read())
-#     p.close()
-# except Exception as err:
-#     print(err)
+#
+#     file = open("sample.txt", "a")
+#
+#     file.write("\nHello! This line was appended.")
+#
+#     file.close()
+#
+#     print("Content appended successfully.")
+#
+# except Exception as error:
+#
+#     print(error)
 
 
-
-
-#Create file with 'x'
+# =========================================================
+# EXAMPLE 2 : WRITE MODE ('w')
+# =========================================================
 
 # try:
-#     p= open(r"C:\Users\ibrah\OneDrive\Desktop\New  file.rtf",'x')
-#     # 'w' is used to create file, fails if file exists.
-
-    
-#     p.write("\n once again Hello This is new file and this overlaped")
-
-#     # print(p.read())
-#     # p.close()
-# except Exception as err:
-#     print(err)
-
-
-
-
+#
+#     file = open("sample.txt", "w")
+#
+#     file.write("Hello! This file was created using write mode.")
+#
+#     file.close()
+#
+#     print("File written successfully.")
+#
+# except Exception as error:
+#
+#     print(error)
 
 
+# =========================================================
+# EXAMPLE 3 : READ MODE ('r')
+# =========================================================
+
+# try:
+#
+#     file = open("sample.txt", "r")
+#
+#     print(file.read())
+#
+#     file.close()
+#
+# except Exception as error:
+#
+#     print(error)
 
 
-                    # File Handling Project
+# =========================================================
+# EXAMPLE 4 : CREATE MODE ('x')
+# =========================================================
 
+# try:
+#
+#     file = open("new_file.txt", "x")
+#
+#     file.write("This file was created using 'x' mode.")
+#
+#     file.close()
+#
+#     print("File created successfully.")
+#
+# except Exception as error:
+#
+#     print(error)
+
+
+# =========================================================
+# EXAMPLE 5 : READ LINE BY LINE
+# =========================================================
+
+# try:
+#
+#     file = open("sample.txt", "r")
+#
+#     for line in file:
+#         print(line.strip())
+#
+#     file.close()
+#
+# except Exception as error:
+#
+#     print(error)
+
+
+# =========================================================
+# EXAMPLE 6 : READ ALL LINES
+# =========================================================
+
+# try:
+#
+#     file = open("sample.txt", "r")
+#
+#     lines = file.readlines()
+#
+#     print(lines)
+#
+#     file.close()
+#
+# except Exception as error:
+#
+#     print(error)
+
+
+# =========================================================
+# EXAMPLE 7 : WITH STATEMENT (Recommended)
+# =========================================================
+
+# try:
+#
+#     with open("sample.txt", "r") as file:
+#
+#         print(file.read())
+#
+# except Exception as error:
+#
+#     print(error)
+
+
+# =========================================================
+# EXCEPTION HANDLING
+# =========================================================
+
+# try:
+#
+#     file = open("sample.txt", "r")
+#
+# except FileNotFoundError:
+#
+#     print("File does not exist.")
+#
+# except PermissionError:
+#
+#     print("Permission denied.")
+#
+# except Exception as error:
+#
+#     print(error)
+
+
+# =========================================================
+# FILE HANDLING PRACTICE
+# =========================================================
+
+# ---------------------------------------------------------
+# Q1. Create a File
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q2. Write Data into a File
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q3. Read Data from a File
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q4. Append Data into a File
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q5. Count Number of Lines in a File
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q6. Count Number of Words in a File
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q7. Copy Content from One File to Another
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q8. Search a Word in a File
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q9. Count Frequency of Characters
+# ---------------------------------------------------------
+
+# ...
+
+# ---------------------------------------------------------
+# Q10. Read File Line by Line
+# ---------------------------------------------------------
+
+# ...
+
+
+# =========================================================
+# MINI PROJECT
+# =========================================================
+
+# File Handling Project
+#
+# Ideas:
+#
+# 1. Student Record Management System
+# 2. Contact Book
+# 3. To-Do List
+# 4. Notes Manager
+# 5. Expense Tracker

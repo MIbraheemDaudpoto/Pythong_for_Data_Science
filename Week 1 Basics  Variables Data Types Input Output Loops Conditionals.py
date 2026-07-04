@@ -1,287 +1,325 @@
-#Type Conversion
+"""
+===========================================================
+                PYTHON BASICS - PART 01
+===========================================================
 
-                #int
-# n= "2"
-# n= int(n)
+Topics Covered:
+1. Type Conversion
+2. Input & Output
+3. Operators
+4. Conditional Statements
+5. Loops
+6. Practice Questions
+
+Author : Muhammad Ibraheem
+===========================================================
+"""
+
+# =========================================================
+# 1. TYPE CONVERSION
+# =========================================================
+
+# ---------- Integer Conversion ----------
+
+# n = "2"
+# n = int(n)
 # print(type(n))
+# print(n)
+
+# ---------- Float & Boolean Conversion ----------
+
+# n = 2.3
+# n = bool(n)
 # print(n)
 # print(type(n))
 
 
+# =========================================================
+# 2. INPUT & OUTPUT
+# =========================================================
 
-                #float() & Bool()
+# name = input("Enter Your Name: ")
+# age = input("Enter Your Age: ")
 
-# n= 2.3
-# n= bool(n)
-# print(n)
-# print(type(n))
+# age = int(age)
 
-
-
-
-                    #input & output
-
-# name= input("Enter Your Name: ")
-# age= input("Enter Your Age: ")
-
-# age= int(age)
-
-# print(f"Your Name is {name} and Your age is {age}")
-
+# print(f"Your Name is {name} and Your Age is {age}")
 
 # print(type(name))
 # print(type(age))
 
 
+# =========================================================
+# 3. OPERATORS
+# =========================================================
 
-                    #Operators
+# a = 2
+# b = 4
 
-# a= 2
-# b= 4
-
-# print(a+b)
-# print(a-b)
-# print(a*b)
-# print(a/b)
-# print(a%b)
-# print(a//b)
-# print(a**b)
-
-
-
+# print("Addition:", a + b)
+# print("Subtraction:", a - b)
+# print("Multiplication:", a * b)
+# print("Division:", a / b)
+# print("Modulus:", a % b)
+# print("Floor Division:", a // b)
+# print("Exponent:", a ** b)
 
 
-                #Conditions
+# =========================================================
+# 4. CONDITIONAL STATEMENTS
+# =========================================================
 
-# money= int(input("Give me Money: "))
+# money = int(input("Give me Money: "))
 
-# if money >=10 and money <=20:
+# if 10 <= money <= 20:
 #     print("Give him a Cheegum")
 
-# elif money >=20 and money <=30:
+# elif 20 <= money <= 30:
 #     print("Give him a Cake")
 
-# elif money >30:
-#     print("Give him what hee want")
+# elif money > 30:
+#     print("Give him what he wants")
+
 # else:
-#     print("Go Back and Pick up some rupees")
+#     print("Go Back and Pick up some Rupees")
 
 
+# =========================================================
+# CONDITIONAL STATEMENTS - PRACTICE QUESTIONS
+# =========================================================
 
+# ---------------------------------------------------------
+# Q1. Find the Greatest Number
+# ---------------------------------------------------------
 
-
-
-
-                #Some Questions on Conditional Statements
-
-#Qno1: Accept the two numbers and print greatest between them.
-
-
-# a= int(input("Enter a Number: "))
-# b= int(input("Enter a Number: "))
-
+# a = int(input("Enter First Number: "))
+# b = int(input("Enter Second Number: "))
 
 # if a > b:
 #     print("A is Greater than B")
-
 # else:
 #     print("B is Greater than A")
 
 
+# ---------------------------------------------------------
+# Q2. Welcome User According to Gender
+# ---------------------------------------------------------
 
-# Qno2: Accept the gender and welcome as per gender status
+# gender = input("Enter Gender (M/F): ")
 
-# gender= input("Can you Please Tell us Your Gender (i.e: M/F): ")
-
-# if gender=="M" or gender=="m":
+# if gender == "M" or gender == "m":
 #     print("Good Morning Sir")
-# elif gender== "F"or gender=="f":
+
+# elif gender == "F" or gender == "f":
 #     print("Good Morning Ma'am")
+
 # else:
-#     print("Enter a valid input Thanks😋")
+#     print("Please Enter a Valid Input")
 
 
+# ---------------------------------------------------------
+# Q3. Check Even or Odd
+# ---------------------------------------------------------
 
-# Qno3 Check the number is even or ODD
+# num = int(input("Enter a Number: "))
 
-# num= int(input("Enter a Number"))
-
-
-# if num% 2==0:
-#     print(f"{num} is EVEN Number")
+# if num % 2 == 0:
+#     print(f"{num} is an EVEN Number")
 # else:
-#     print(f"{num} is ODD Number")
+#     print(f"{num} is an ODD Number")
 
 
-                                    #loops
+# =========================================================
+# 5. LOOPS
+# =========================================================
 
+# ---------- range() ----------
 
-# a=  range(10, 50, 5)
-
-
-# for i in a:
+# for i in range(10, 50, 5):
 #     print(i)
 
 
-# a= "Printing"
+# ---------- Loop Through String ----------
 
-# for i in range(len(a)):
-#     print(a[i])
+# text = "Printing"
+
+# for i in range(len(text)):
+#     print(text[i])
 
 
-# for i in range(1,31):
-#     if i==4:
-        
-#         print("Break is Executed")
+# ---------- break & else ----------
+
+# for i in range(1, 31):
+
+#     if i == 4:
+#         print("Break Executed")
 #         break
+
 #     print(i)
+
 # else:
-#         print("Break is not Executed")
+#     print("Break Not Executed")
 
 
+# =========================================================
+# LOOP PRACTICE QUESTIONS
+# =========================================================
 
-                        # Questions on Loop
+# ---------------------------------------------------------
+# Q1. Print "Hello World" N Times
+# ---------------------------------------------------------
 
-# Qno1: 
+# n = int(input("Enter an Integer: "))
 
-# n= int(input("Give an Integer: "))
-
-# for i in range(1,n+1):
+# for i in range(1, n + 1):
 #     print("Hello World")
 
 
+# ---------------------------------------------------------
+# Q2. Print Natural Numbers
+# ---------------------------------------------------------
 
+# n = int(input("Enter an Integer: "))
 
-# Qno2: Print Natural Natural Numbers up to n
-
-# n= int(input("Tell me an Integer: "))
-
-# for i in range(1,n+1):
+# for i in range(1, n + 1):
 #     print(i)
 
 
-# Qno3: Reverser For Loop and print n to 1:
+# ---------------------------------------------------------
+# Q3. Reverse Counting
+# ---------------------------------------------------------
 
-# n= int(input("Tell me an Integer: "))
+# n = int(input("Enter an Integer: "))
 
 # for i in range(n, 0, -1):
 #     print(i)
 
 
-# Qno4 Take a Number and print its Table
+# ---------------------------------------------------------
+# Q4. Multiplication Table
+# ---------------------------------------------------------
 
-# n= int(input("Tell me an Integer: "))
+# n = int(input("Enter an Integer: "))
 
-# for i in range(1,11):
-#     if i>10:
-#         break
-#     else:
-#         print(f"{n}x{i} = {n*i}")
+# for i in range(1, 11):
+#     print(f"{n} x {i} = {n * i}")
 
 
-# Qno5 Sum of All Integers numbers till n
+# ---------------------------------------------------------
+# Q5. Sum of Numbers
+# ---------------------------------------------------------
 
-# n= int(input("Tell me an Integer: "))
+# n = int(input("Enter an Integer: "))
 
-# sum= 0
+# total = 0
 
-# for i in range(1,n+1):
-#     sum+=i
+# for i in range(1, n + 1):
+#     total += i
 
-# print(sum)
+# print(total)
 
-# Qno6 Factorial of a Number
 
-# n= int(input("Tell me an Integer: "))
+# ---------------------------------------------------------
+# Q6. Factorial
+# ---------------------------------------------------------
 
-# factorial=1
+# n = int(input("Enter an Integer: "))
 
-# for i in range(1, n+1):
-#     factorial*=i
+# factorial = 1
+
+# for i in range(1, n + 1):
+#     factorial *= i
 
 # print(f"Factorial of {n} is {factorial}")
 
 
-# Qno7 Find the sum of Even and ODD numbers Seperately
+# ---------------------------------------------------------
+# Q7. Sum of Even & Odd Numbers
+# ---------------------------------------------------------
 
-# n= int(input("Tell me an Integer: "))
+# n = int(input("Enter an Integer: "))
 
-# Even= 0
-# Odd=0
+# even = 0
+# odd = 0
 
+# for i in range(1, n + 1):
 
-# for i in range(1, n+1):
-#     if i % 2==0:
-#         Even+=i
+#     if i % 2 == 0:
+#         even += i
 #     else:
-#         Odd+=i
+#         odd += i
+
+# print("Even Sum:", even)
+# print("Odd Sum:", odd)
 
 
-# print(f"Sum of All Even Numbers Till {n} is  : {Even}")
-# print(f"Sum of All Odd Numbers Till {n} is  : {Odd}")
+# ---------------------------------------------------------
+# Q8. Perfect Number
+# ---------------------------------------------------------
 
+# n = int(input("Enter an Integer: "))
 
+# total = 0
 
-# Qno7 Find Factors of a Number
+# for i in range(1, n):
 
-# n= int(input("Tell me an Integer: "))
+#     if n % i == 0:
+#         total += i
 
-# sum=0
-# for i in range(1,n):
-#     if n%i==0:
-#         sum+=i
+# if total == n:
+#     print("Perfect Number")
 
-# if sum==n:
-#     print(f"{n} is Perfect Number ")
 # else:
-#     print(f"{n} is not Perfect Number ")
-    
+#     print("Not a Perfect Number")
 
 
-# Qno8 Check Number is Prime or Not
+# ---------------------------------------------------------
+# Q9. Prime Number
+# ---------------------------------------------------------
 
-# n= int(input("Tell me an Integer: "))
+# n = int(input("Enter an Integer: "))
 
-# Factors=0
+# factors = 0
 
+# for i in range(1, n + 1):
 
-# for i in range(1,n+1):
-#     if n%i==0:
-#         Factors+=1
+#     if n % i == 0:
+#         factors += 1
 
+# if factors == 2:
+#     print("Prime Number")
 
-# if Factors==2:
-#     print(f"{n} is a Prime Number")
 # else:
-#     print(f"{n} is a Composite Number")
+#     print("Composite Number")
 
 
-# Qno9: Reverse an String
+# ---------------------------------------------------------
+# Q10. Reverse a String
+# ---------------------------------------------------------
 
-# string= str(input("Give me String That You want to Reverse: "))
+# text = input("Enter a String: ")
 
-# ubti=""
+# reverse = ""
 
-# for i in range(len(string)-1, -1, -1):
-#     ubti+=string[i]
-# print(ubti)
+# for i in range(len(text) - 1, -1, -1):
+#     reverse += text[i]
 
-
-
-# Qn10: Check string is Pallindrome or not
-
-
-# string= str(input("Check String is Pallindrome or Not:- ")).lower()
-# reverse=""
-
-# for i in range(len(string)-1,-1,-1):
-#     reverse+=string[i]
+# print(reverse)
 
 
-# print(string)
-# if string==reverse:
-#     print("String is Pallindrome")
+# ---------------------------------------------------------
+# Q11. Palindrome Check
+# ---------------------------------------------------------
+
+# text = input("Enter a String: ").lower()
+
+# reverse = ""
+
+# for i in range(len(text) - 1, -1, -1):
+#     reverse += text[i]
+
+# if text == reverse:
+#     print("Palindrome")
+
 # else:
-#     print("String is not Pallindrome")
-
-
+#     print("Not a Palindrome")
